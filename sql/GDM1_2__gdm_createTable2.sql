@@ -1,0 +1,1 @@
+create table gdm2 (col1 varchar(100))

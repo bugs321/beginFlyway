@@ -1,0 +1,15 @@
+Flyway Community Edition 7.4.0 by Redgate
+Database: jdbc:sqlserver://DESKTOP-0F743CS:1433;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=GDM;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 15.0)
+WARNING: DB: Changed database context to 'GDM'. (SQL State: S0001 - Error Code: 5701)
+Schema version: 1.4
+
++-----------+---------+-----------------------+----------+---------------------+----------+
+| Category  | Version | Description           | Type     | Installed On        | State    |
++-----------+---------+-----------------------+----------+---------------------+----------+
+|           | 1       | << Flyway Baseline >> | BASELINE | 2021-01-10 20:43:02 | Baseline |
+| Versioned | 1.1     | gdm createTable1      | SQL      | 2021-01-10 20:44:20 | Success  |
+| Versioned | 1.2     | gdm createTable2      | SQL      | 2021-01-10 20:44:20 | Success  |
+| Versioned | 1.3     | gdm CreateTable3      | SQL      | 2021-01-10 20:44:20 | Success  |
+| Versioned | 1.4     | gdm CreateTable3Error | SQL      | 2021-01-10 20:47:45 | Success  |
++-----------+---------+-----------------------+----------+---------------------+----------+
+

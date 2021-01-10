@@ -1,0 +1,1 @@
+create table fsdb1 (col1 int)

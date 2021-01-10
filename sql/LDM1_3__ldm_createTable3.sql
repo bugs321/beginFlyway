@@ -1,0 +1,1 @@
+create table ldm3 (col1 date)
