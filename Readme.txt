@@ -3,17 +3,19 @@
 
 Sample commands
 #to get list of script going to be applied
-flyway info -configFiles=C:\OneSumX\conf\osx_ldm.conf -outputFile=C:\OneSumX_Release\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
+flyway info -configFiles=C:\beginFlyway\conf\osx_ldm.conf -outputFile=C:\beginFlyway\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
 #to create a baseline 
-flyway baseline -configFiles=C:\OneSumX\conf\osx_ldm.conf -outputFile=C:\OneSumX_Release\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
-flyway migrate -configFiles=C:\OneSumX\conf\osx_ldm.conf -outputFile=C:\OneSumX_Release\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
+flyway baseline -configFiles=C:\beginFlyway\conf\osx_ldm.conf -outputFile=C:\beginFlyway\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
+flyway migrate -configFiles=C:\beginFlyway\conf\osx_ldm.conf -outputFile=C:\beginFlyway\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log
 
 #To deploy only 2 sripts (1.1 and 1.2) from the available list of scripts to be executed then below command is used (add -target=X.X version)
-flyway info -configFiles=C:\OneSumX_Release\conf\osx_gdm.conf -outputFile=C:\OneSumX_Release\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log -target=1.2
+flyway info -configFiles=C:\beginFlyway\conf\osx_gdm.conf -outputFile=C:\beginFlyway\logs\GDM_%date%_%time:~0,2%%time:~3,2%%time:~6,2%.log -target=1.2
+
+## Above scripts may not work for specific time like midnight due to string concatenation issue of "%date%_%time:~0,2%%time:~3,2%%time:~6,2%", at such time kindly skip using "%date%_%time:~0,2%%time:~3,2%%time:~6,2%" in the name of the log file.   
 
 Sample folder structure:
 
-C:.
+C:\beginFlyway
 │   Readme.txt
 │
 ├───conf
@@ -41,7 +43,7 @@ C:.
 
 
 
-Flayway Usage
+Flyway Usage
 =============
 
 flyway [options] command
